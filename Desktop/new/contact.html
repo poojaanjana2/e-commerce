@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .contact_section  {
+            margin-top: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+           
+            background-image: url(img/gg.jpg);
+
+            background-size: cover;
+        }
+
+        .contact_section  h1 {
+            color: black;
+            font-family: sans-serif;
+            margin: 0px;
+        }
+
+        .registartion-form {
+            box-shadow: 5px 5px 5px 5px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            color: black;
+            font-size: 18px;
+            font-family: sans-serif;
+            background-color:#44516D;
+            padding: 20px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .registartion-form input,
+        .registartion-form select,
+        .registartion-form textarea {
+            border-radius: 10px;
+            border: none;
+            padding: 5px;
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+
+        .registartion-form input:focus,
+        .registartion-form textarea:focus {
+            box-shadow: 3px 3px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
+        }
+
+        .registartion-form .submit {
+            width: 100%;
+            padding: 8px 0;
+            font-size: 30px;
+            color: azure(44, 44, 44);
+            background-color: white;
+            border-radius: 5px;
+
+        }
+
+        .registartion-form .submit:hover {
+            box-shadow: 3px 3px 6px rgb(255, 214, 176);
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <nav class="navbar" >
+        <div class="nav " >
+            <img src="img/dark-logo.png" class="brand-logo" alt="">
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" placeholder="search brand, product">
+                    <button class="search-btn">search</button>
+                </div>
+
+                <a href="#"><img src="img/user.png" alt=""></a>
+                <a href="#"><img src="img/cart.png" alt=""></a>
+            </div>
+        </div>
+    </nav>
+  
+
+    <div class="contact_section " style="width: 100%;">
+        <form class="registartion-form">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name" id="name" placeholder="your name" onblur="validate(id)">
+                        <br> <span id="error"></span>
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="text" name="email" id="email" placeholder="your email" onblur="validate(id)">
+                        <br><span id="error2"></span>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" name="password" id="password" placeholder="your Password"
+                            onblur="validate(id)">
+                        <br><span id="error3"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="phoneNumber">Phone Number:</label></td>
+                    <td><input type="text" name="phoneNumber" id="phoneNumber" placeholder="your PhoneNumber"
+                            maxlength="10" onblur="validate(id)">
+                        <br>
+                        <span id="error4"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>Male: <input type="radio" name="gender" id="gender" value="male" required>
+                        Female: <input type="radio" name="gender" id="gender" value="female">
+                        Other: <input type="radio" name="gender" id="gender" value="other">
+                        <br>
+                        <span id="error5"></span>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="2"><input type="submit" class="submit" value="submit" id="submit"
+                            disabled="disabled" /></td>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <img src="img/light-logo.png" class="logo" alt="">
+            <div class="footer-ul-container">
+                <ul class="category">
+                    <li class="category-title">men</li>
+                    <li><a href="#" class="footer-link">t-shirts</a></li>
+                    <li><a href="#" class="footer-link">sweatshirts</a></li>
+                    <li><a href="#" class="footer-link">shirts</a></li>
+                    <li><a href="#" class="footer-link">jeans</a></li>
+                    <li><a href="#" class="footer-link">trousers</a></li>
+                    <li><a href="#" class="footer-link">shoes</a></li>
+                    <li><a href="#" class="footer-link">casuals</a></li>
+                    <li><a href="#" class="footer-link">formals</a></li>
+                    <li><a href="#" class="footer-link">sports</a></li>
+                    <li><a href="#" class="footer-link">watch</a></li>
+                </ul>
+                <ul class="category">
+                    <li class="category-title">women</li>
+                    <li><a href="#" class="footer-link">t-shirts</a></li>
+                    <li><a href="#" class="footer-link">sweatshirts</a></li>
+                    <li><a href="#" class="footer-link">shirts</a></li>
+                    <li><a href="#" class="footer-link">jeans</a></li>
+                    <li><a href="#" class="footer-link">trousers</a></li>
+                    <li><a href="#" class="footer-link">shoes</a></li>
+                    <li><a href="#" class="footer-link">casuals</a></li>
+                    <li><a href="#" class="footer-link">formals</a></li>
+                    <li><a href="#" class="footer-link">sports</a></li>
+                    <li><a href="#" class="footer-link">watch</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-title">about company</p>
+        <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore ad suscipit, eos eius
+            quisquam sed optio nisi quaerat fugiat ratione et vero maxime praesentium, architecto minima reiciendis iste
+            quo deserunt assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur corporis laboriosam! Cum
+            error ipsum laborum tempore in rerum necessitatibus nostrum nobis modi! Debitis adipisci illum nemo aperiam
+            sed, et accusamus ut officiis. Laborum illo exercitationem quo culpa reprehenderit excepturi distinctio
+            tempore cupiditate praesentium nisi ut iusto, assumenda perferendis facilis voluptas autem fuga sunt ab
+            debitis voluptatum harum eum. Asperiores, natus! Est deserunt incidunt quasi placeat omnis, itaque harum?
+        </p>
+        <p class="info">support emails - help@clothing.com, customersupport@clothing.com</p>
+        <p class="info">telephone - 180 00 00 001, 180 00 00 002</p>
+        <div class="footer-social-container">
+            <div>
+                <a href="#" class="social-link">terms & services</a>
+                <a href="#" class="social-link">privacy page</a>
+            </div>
+            <div>
+                <a href="#" class="social-link">instagram</a>
+                <a href="#" class="social-link">facebook</a>
+                <a href="#" class="social-link">twitter</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+
+
+
+    // function for form varification
+
+    function validate(id) {
+        var fName = document.getElementById("name").value;
+        var Emails = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phoneNumber");
+        var str = document.getElementById("password").value;
+        if (id == "name") {
+            var fName = document.getElementById("name").value;
+            var string = /^[a-zA-Z]+$/;
+
+            if (fName == "") {
+
+                document.getElementById("name").style.border = "1px solid red";
+
+                error.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*First Name cannot be blank</span>"
+
+                return false;
+
+            }
+
+            else {
+
+                if (!fName.match(string)) {
+
+                    error.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*Please Enter A String .</span>"
+
+                    // document.getElementById("firstName").style.border="1px solid red";
+
+                    return false;
+
+                }
+
+                error.innerHTML = "";
+
+                document.getElementById("name").style.border = "";
+
+            }
+
+
+        }
+
+        if (id == "email") {
+            var Emails = document.getElementById("email").value;
+
+            if (!Emails.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+
+
+
+                document.getElementById("email").style.border = "1px solid red";
+
+                error2.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*invalid email</span>"
+
+                return false;
+
+            }
+            error2.innerHTML = "";
+
+            document.getElementById("email").style.border = "";
+
+        }
+
+        if (id == "phoneNumber") {
+            var phoneNumber = document.getElementById("phoneNumber");
+
+            if (!phoneNumber.value.match(/^\(?([6-9]{1})\)?([0-9]{9})$/)) {
+                document.getElementById("phoneNumber").style.border = "1px solid red";
+
+
+                error4.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*invalid phonenumber!</span>"
+                return false;
+            }
+            error4.innerHTML = "";
+
+            document.getElementById("phoneNumber").style.border = "";
+
+        }
+        if (id == "password") {
+
+
+
+            let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+
+            if (str == "") {
+
+                error3.style.backgroundColor = "";
+
+                error3.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*Please Enter Password</span>"
+
+                return false;
+            } else {
+
+                if (strongPassword.test(str)) {
+
+                    error3.style.backgroundColor = "green";
+
+                    error3.innerHTML = "<span style='color: white; font-size: 12px; padding:10px;'>" + "Strong Password</span>"
+
+                } else {
+
+                    error3.style.backgroundColor = 'red';
+
+                    error3.innerHTML = "<span style='color: white; font-size: 12px; padding:10px;'>" + "Weak Password</span>"
+
+                }
+
+
+
+
+
+            }
+        }
+        if (!fName == "" && !Emails == "" && !phoneNumber == "" && !str == "") {
+
+            document.getElementById("submit").disabled = false;
+
+
+
+        } else {
+
+            document.getElementById("submit").disabled = false;
+
+        }
+    }
+
+
+    function ageCount() {
+
+        var dobValue = document.getElementById("birthdayDate").value;
+
+        if (dobValue == "") {
+
+            error7.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*Please Choose Brthday Of Day.</span>"
+
+            document.getElementById("birthdayDate").style.border = "1px solid red";
+
+            return false;
+
+        } else {
+
+            var dob = new Date(dobValue);
+
+            var difference = Date.now() - dob.getTime();
+            var ageDate = new Date(difference);
+
+            var calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+
+            error8.innerHTML = "<span style='color: black; font-size: 20px;'>" + calculatedAge + " Year</span>"
+
+
+        }
+    }
+
+</script>
+<script src="navv.js"></script>
+
+</html>
