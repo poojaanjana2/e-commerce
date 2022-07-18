@@ -1,348 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <style>
-        @media screen and (max-width: 800px)
-        {
-
-        }
-        @media screen and (max-width: 360px)
-        {
-
-        }
-        * {
-            margin: 0;
-        }
-
-        .contact_section  {
-            margin-top: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-           
-            background-image: url(img/gg.jpg);
-
-            background-size: cover;
-        }
-
-        .contact_section  h1 {
-            color: black;
-            font-family: sans-serif;
-            margin: 0px;
-        }
-
-        .registartion-form {
-            box-shadow: 5px 5px 5px 5px;
-            border-radius: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 600px;
-            color: black;
-            font-size: 18px;
-            font-family: sans-serif;
-            background-color:#44516D;
-            padding: 20px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .registartion-form input,
-        .registartion-form select,
-        .registartion-form textarea {
-            border-radius: 10px;
-            border: none;
-            padding: 5px;
-            margin-top: 10px;
-            font-family: sans-serif;
-        }
-
-        .registartion-form input:focus,
-        .registartion-form textarea:focus {
-            box-shadow: 3px 3px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
-        }
-
-        .registartion-form .submit {
-            width: 100%;
-            padding: 8px 0;
-            font-size: 30px;
-            color: azure(44, 44, 44);
-            background-color: white;
-            border-radius: 5px;
-
-        }
-
-        .registartion-form .submit:hover {
-            box-shadow: 3px 3px 6px rgb(255, 214, 176);
-        }
-    
-    </style>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/
+	4.0.0/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/
+	jquery/3.3.1/jquery.min.js">
+	</script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/
+	popper.js/1.12.9/umd/popper.min.js">
+	</script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/
+	4.0.0/js/bootstrap.min.js">
+	</script>
 </head>
 
-
-
-
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">Navbar</a>
-            <button class="navbar-toggler bg-light " type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon text-dark"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent" style="margin-left: 70%;">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item ">
-                        <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="about.html" >aboutus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="contact.html">contactus</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="gallery.html">Gallery</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="service.html">Services</a>
-                    </li>
-                    </ul>
-                    
-            
-            </div>
-        </div>
-    </nav>
-
-    <div class="contact_section mt-0" style="width: 100%;">
-        <form class="registartion-form">
-            <table>
-                <tr>
-                    <td><label for="name">Name:</label></td>
-                    <td><input type="text" name="name" id="name" placeholder="your name" onblur="validate(id)" required>
-                        <br> <span id="error"></span>
-                    </td>
-
-
-                </tr>
-                <tr>
-                    <td><label for="email">Email:</label></td>
-                    <td><input type="text" name="email" id="email" placeholder="your email" onblur="validate(id)" required>
-                        <br><span id="error2"></span>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <td><label for="phoneNumber">Phone Number:</label></td>
-                    <td><input type="text" name="phoneNumber" id="phoneNumber" placeholder="your PhoneNumber"
-                            maxlength="10" onblur="validate(id)" required>
-                        <br>
-                        <span id="error4"></span>
-                    </td>
-                </tr>
-
-               
-                <tr>
-                    <td><label for="password">Message Box:</label></td>
-                    <td><textarea input type="text" name="password" id="password" placeholder="your Message"
-                            required >
-                        </textarea>
-                        </td>
-                </tr>
-
-
-
-                <tr>
-                    <td colspan="2"><input type="submit" class="submit" value="submit" id="submit"
-                            disabled="disabled" /></td>
-
-                </tr>
-            </table>
-        </form>
-    </div>
     
-        
+    
+        <nav class="navbar navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+              <a class="navbar-brand text-light" href="#">Navbar</a>
+              <button class="navbar-toggler bg-light " type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon text-dark"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent" style="margin-left: 70%;">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                      <li class="nav-item ">
+                          <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="about.html" >aboutus</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="contact.html">contactus</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="gallery.html">Gallery</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="service.html">Services</a>
+                      </li>
+                      </ul>
+                      
+              
+              </div>
+          </div>
+      </nav><br>
+	<h1 class="text-center text-success">
+		Registration Form
+	</h1>
+	
+	<div class="container">
+		<div class="col-lg-8
+		m-auto d-block">
+			<form>
+				<div class="form-group">
+					<label for="user">
+						Username:
+					</label>
+					<input type="text" name="username" id="usernames" class="form-control">
+					<h5 id="usercheck" style="color: red;">
+						**Username is missing
+					</h5>
+				</div>
+				
+				<div class="form-group">
+					<label for="user">
+						Email:
+					</label>
+					<input type="email" name="email" id="email" required class="form-control">
+					<small id="emailvalid" class="form-text
+				text-muted invalid-feedback">
+						Your email must be a valid email
+					</small>
+				</div>
+                <div class="col-md-12">
+                    <div class="form-control">
+                     <label for="massege">massege</label>
+                     <input type="text" id="massege" required placeholder="Enter massege">
+                     <small>Error Message</small>
+                    </div>
+                </div>
 
+				<div class="form-group">
+					<label for="password">
+						Password:
+					</label>
+					<input type="password" name="pass" id="password" class="form-control">
+					<h5 id="passcheck" style="color: red;">
+						**Please Fill the password
+					</h5>
+				</div>
+
+				
+
+				<input type="submit" id="submitbtn" value="Submit" class="btn btn-primary">
+			</form>
+		</div>
+	</div>
+
+	<!-- Including app.js jQuery Script -->
+	<script src="app.js"></script>
 </body>
-<script>
-
-
-
-    // function for form varification
-
-    function validate(id) {
-        var fName = document.getElementById("name").value;
-        var Emails = document.getElementById("email").value;
-        var phoneNumber = document.getElementById("phoneNumber");
-        var str = document.getElementById("password").value;
-        if (id == "name") {
-            var fName = document.getElementById("name").value;
-            var string = /^[a-zA-Z]+$/;
-
-            if (fName == "") {
-
-                document.getElementById("name").style.border = "1px solid red";
-
-                error.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*First Name cannot be blank</span>"
-
-                return false;
-
-            }
-
-            else {
-
-                if (!fName.match(string)) {
-
-                    error.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*Please Enter A String .</span>"
-
-                    // document.getElementById("firstName").style.border="1px solid red";
-
-                    return false;
-
-                }
-
-                error.innerHTML = "";
-
-                document.getElementById("name").style.border = "";
-
-            }
-
-
-        }
-
-        if (id == "email") {
-            var Emails = document.getElementById("email").value;
-
-            if (!Emails.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-
-
-
-                document.getElementById("email").style.border = "1px solid red";
-
-                error2.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*invalid email</span>"
-
-                return false;
-
-            }
-            error2.innerHTML = "";
-
-            document.getElementById("email").style.border = "";
-
-        }
-
-        if (id == "phoneNumber") {
-            var phoneNumber = document.getElementById("phoneNumber");
-
-            if (!phoneNumber.value.match(/^\(?([6-9]{1})\)?([0-9]{9})$/)) {
-                document.getElementById("phoneNumber").style.border = "1px solid red";
-
-
-                error4.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*invalid phonenumber!</span>"
-                return false;
-            }
-            error4.innerHTML = "";
-
-            document.getElementById("phoneNumber").style.border = "";
-
-        }
-        if (id == "password") {
-
-
-
-            let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
-
-            if (str == "") {
-
-                error3.style.backgroundColor = "";
-
-                error3.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*Please Enter Password</span>"
-
-                return false;
-            } else {
-
-                if (strongPassword.test(str)) {
-
-                    error3.style.backgroundColor = "green";
-
-                    error3.innerHTML = "<span style='color: white; font-size: 12px; padding:10px;'>" + "Strong Password</span>"
-
-                } else {
-
-                    error3.style.backgroundColor = 'red';
-
-                    error3.innerHTML = "<span style='color: white; font-size: 12px; padding:10px;'>" + "Weak Password</span>"
-
-                }
-
-
-
-
-
-            }
-        }
-        if (!fName == "" && !Emails == "" && !phoneNumber == "" && !str == "") {
-
-            document.getElementById("submit").disabled = false;
-
-
-
-        } else {
-
-            document.getElementById("submit").disabled = false;
-
-        }
-    }
-
-
-    function ageCount() {
-
-        var dobValue = document.getElementById("birthdayDate").value;
-
-        if (dobValue == "") {
-
-            error7.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*Please Choose Brthday Of Day.</span>"
-
-            document.getElementById("birthdayDate").style.border = "1px solid red";
-
-            return false;
-
-        } else {
-
-            var dob = new Date(dobValue);
-
-            var difference = Date.now() - dob.getTime();
-            var ageDate = new Date(difference);
-
-            var calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
-
-            error8.innerHTML = "<span style='color: black; font-size: 20px;'>" + calculatedAge + " Year</span>"
-
-
-        }
-    }
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-        crossorigin="anonymous"></script>
-
 
 </html>
